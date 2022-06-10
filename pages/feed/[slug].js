@@ -8,16 +8,16 @@ export const Feed = ({ pageNumber, articles }) => {
   return (
     <>
       <Toolbar />
-      <section class="text-white body-font bg-gradient-to-r from-cyan-500 to-blue-900">
-        <div class="container px-5 py-10 mx-auto">
-          <div class="flex flex-wrap w-full mb-20">
-            <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-yellow-400">
+      <section className="text-white body-font bg-gradient-to-r from-cyan-500 to-blue-900">
+        <div className="container px-5 py-10 mx-auto">
+          <div className="flex flex-wrap w-full mb-20">
+            <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
+              <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-yellow-400">
                 What's Going On India!!!
               </h1>
-              <div class="h-1 w-20 bg-yellow-500 rounded"></div>
+              <div className="h-1 w-20 bg-yellow-500 rounded"></div>
             </div>
-            <p class="lg:w-1/2 w-full leading-relaxed ">
+            <p className="lg:w-1/2 w-full leading-relaxed ">
               provide a great sense of educational value. It carries information
               about politics, economy, entertainment, sports, business,
               industry, trade and commerce. With this habit, it will not only
@@ -29,12 +29,12 @@ export const Feed = ({ pageNumber, articles }) => {
             </p>
           </div>
 
-          <div class="xl:w-1/4 md:w-1/2 p-4 m-auto">
-            <div class="bg-gray-100 p-6 rounded-lg divide-y divide-dashed">
+          <div className="xl:w-1/4 md:w-1/2 p-4 m-auto">
+            <div className="bg-gray-100 p-6 rounded-lg divide-y divide-dashed">
               {articles.map((article, index) => (
                 <div
                   key={index}
-                  class="tracking-widest text-gray-500 text-xs font-medium title-font font-sans"
+                  className="tracking-widest text-gray-500 text-xs font-medium title-font font-sans"
                 >
                   <Link className="cursor-pointer" href={article.url}>
                     <h1 className="text-lg text-blue-900 text-2xl hover:bg-blue-900 hover:text-white font-medium title-font mb-4 cursor-pointer hover:underline">
@@ -49,12 +49,12 @@ export const Feed = ({ pageNumber, articles }) => {
                   {/* <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
                 San Francisco
               </h2> */}
-                  <p class="leading-relaxed text-base mb-4">
+                  <p className="leading-relaxed text-base mb-4">
                     {article.description}
                   </p>
                   {!!article.urlToImage && (
                     <img
-                      class="h-40 rounded w-full object-cover object-center mb-6"
+                      className="h-40 rounded w-full object-cover object-center mb-6"
                       src={article.urlToImage}
                       alt="content"
                     />
@@ -78,7 +78,7 @@ export const Feed = ({ pageNumber, articles }) => {
         ))}
       </div> */}
       <div className="grid grid-flow-col auto-cols-max items-center justify-center">
-        <div class="p-2 w-full">
+        <div className="p-2 w-full">
           <button
             onClick={() => {
               if (pageNumber > 1) {
@@ -97,7 +97,7 @@ export const Feed = ({ pageNumber, articles }) => {
           </button>
         </div>
         <div>#{pageNumber}</div>
-        <div class="p-2 w-full">
+        <div className="p-2 w-full">
           <button
             onClick={() => {
               if (pageNumber < 5) {
